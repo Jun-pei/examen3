@@ -17,7 +17,7 @@ use App\Http\Livewire\Ventas\VentasCreate;
 
 Route::get('/login', Login::class)->name('login');
 
-// Route::group(['middleware'=>'auth'],function(){
+Route::group(['middleware'=>'auth'],function(){
     Route::get('/productos', ProductosIndex::class)->name('productos.index');
     Route::get('/productos/create', ProductosCreate::class)->name('productos.create');
     Route::get('/productos/{curso}/mostrar', ProductosMostrar::class)->name('productos.mostrar');
@@ -32,4 +32,4 @@ Route::get('/login', Login::class)->name('login');
 
     Route::get('/ventas', VentasIndex::class)->name('ventas.index');
     Route::get('/ventas/create', VentasCreate::class)->name('ventas.create');
-// });
+});
